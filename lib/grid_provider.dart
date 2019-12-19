@@ -10,13 +10,13 @@ class GridProvider extends ChangeNotifier {
   final int gridSize;
   final int playSpeed;
 
-  GridProvider({this.gridSize = 6, this.playSpeed = 125}){
+  GridProvider({this.gridSize = 6, this.playSpeed = 150}){
     _midiNotes = List.generate(gridSize, (row){
       return scale[row % 5] + 12 * (row / 5).floor();
     });
 
-//    rootBundle.load("assets/Piano.sf2").then((sf2){
-//      FlutterMidi.prepare(sf2: sf2, name: "Piano.sf2");
+//    rootBundle.load("assets/Dance Trance.sf2").then((sf2){
+//      FlutterMidi.prepare(sf2: sf2, name: "Dance Trance.sf2");
 //    });
 
     rootBundle.load("assets/Perfect_Sine.sf2").then((sf2){
